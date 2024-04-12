@@ -3,16 +3,18 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 255, 255, 255; /* white */
+  --background-start-rgb: 12, 0, 32; /* dark purple */
+  --background-end-rgb: 59, 9, 130; /* deeper purple */
+  --neon-color-rgb: 255, 0, 255; /* neon pink */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background-start-rgb: 12, 0, 32;
+    --background-end-rgb: 59, 9, 130;
+    --neon-color-rgb: 255, 0, 255;
   }
 }
 
@@ -24,6 +26,11 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+.neon-text {
+  color: rgb(var(--neon-color-rgb));
+  text-shadow: 0 0 5px rgb(var(--neon-color-rgb)), 0 0 10px rgb(var(--neon-color-rgb)), 0 0 20px rgb(var(--neon-color-rgb)), 0 0 40px rgb(var(--neon-color-rgb));
 }
 
 @layer utilities {

@@ -13,7 +13,8 @@ export default function Home() {
     const fetchData = async () => {
       if (!input) return setSearchResults({ results: [], duration: 0 });
       const res = await fetch(`/api/search?q=${input}`);
-      const data = await res.json();
+      const data = (await res.json()) as { results: string[]; duration: number };
+      setSearchResults(data);
     };
     fetchData();
   }, [input]);
