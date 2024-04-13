@@ -13,17 +13,6 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip"
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-  AlertDialogTrigger,
-} from "@/components/ui/alert-dialog"
 import { Button } from "@/components/ui/button"
 import Image from "next/image";
 import {useEffect, useState} from 'react';
@@ -138,24 +127,8 @@ export default function Home() {
       </div>
 
       <div className='left-0 top-10 relative w-full flex justify-center'>
-      <AlertDialog>
-      <AlertDialogTrigger asChild>
-        <Button>CHECK SEARCH SPEED</Button>
-      </AlertDialogTrigger>
-      <AlertDialogContent>
-        <AlertDialogHeader>
-          <AlertDialogTitle>Click to shift the deployment server</AlertDialogTitle>
-          <AlertDialogDescription>
-            This action changes the deployed api endpoint from Vercel / Regular deployment
-            to Cloudflare Workers Global deployment for faster response times.
-          </AlertDialogDescription>
-        </AlertDialogHeader>
-        <AlertDialogFooter>
-          <AlertDialogCancel onClick={() => setApishift(false)}>Regular Vercel</AlertDialogCancel>
-          <AlertDialogAction onClick={() => setApishift(true)}>CloudFlare Global</AlertDialogAction>
-        </AlertDialogFooter>
-      </AlertDialogContent>
-    </AlertDialog>
+        <Button onClick={() => setApishift(false)}>Regular Vercel Deployement</Button>
+        <Button onClick={() => setApishift(true)}>CloudFlare Global Deployement</Button>
       </div>
     </main>
   )
