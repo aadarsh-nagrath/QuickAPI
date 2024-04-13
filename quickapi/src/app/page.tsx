@@ -117,7 +117,7 @@ export default function Home() {
         </div>
         <TooltipProvider>
           <Tooltip>
-          <a href="https://dev.to/aadarsh-nagrath/building-an-high-performance-api-with-nextjs-hono-and-cloudflare-workers-1lpn-temp-slug-4265627"><TooltipTrigger>Read To Know More</TooltipTrigger></a>
+          <a href="https://dev.to/aadarsh-nagrath/building-an-high-performance-api-with-nextjs-hono-and-cloudflare-workers-15eo"><TooltipTrigger>Read To Know More</TooltipTrigger></a>
             <TooltipContent>
               <p>Click Me</p>
             </TooltipContent>
