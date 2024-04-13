@@ -11,7 +11,7 @@ In today's digital landscape, speed is paramount. Whether it's delivering conten
 - **Cloudflare Workers**: Revolutionizing deployment and management of APIs by leveraging Cloudflare's global network for minimal latency.
 
 ## Project Overview
-### Speed Search: A High-Performance API
+### Quick API: A High-Performance API
 Our project, aptly named QuickAPI, demonstrates the capabilities of our ultra-fast API. Users can input queries and receive results in milliseconds, thanks to our optimized infrastructure.
 
 ### Example Usage
