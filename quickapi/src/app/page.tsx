@@ -23,12 +23,11 @@ export default function Home() {
     results: string[]
     duration: number
   }>()
-  const [apishift, setApishift] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
       if (!input) return setSearchResults(undefined);
-      const res = (!apishift) ? await fetch(`/api/search?q=${input}`): await fetch(`https://aadarsh.quickapi99.workers.dev/api/search?q=${input}`);
+      const res = await fetch(`https://aadarsh.quickapi99.workers.dev/api/search?q=${input}`);
       const data = (await res.json()) as { results: string[]; duration: number };
       setSearchResults(data);
     };
@@ -124,11 +123,6 @@ export default function Home() {
             </TooltipContent>
           </Tooltip>
         </TooltipProvider>
-      </div>
-
-      <div className='left-0 top-10 relative w-full flex justify-center'>
-        <Button onClick={() => setApishift(false)}>Regular Vercel Deployement</Button>
-        <Button onClick={() => setApishift(true)}>CloudFlare Global Deployement</Button>
       </div>
     </main>
   )
